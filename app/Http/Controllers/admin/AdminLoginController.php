@@ -19,6 +19,10 @@ class AdminLoginController extends Controller
         ]); 
 
         if ($validator->passes()) {
+            
+            if (Auth::guard('admin')->attemp(['email' => $request->email, 'password' => $request->password],$request->get('remember'))){
+                
+            }
         
         } else {
             return redirect()->route('admin.login')

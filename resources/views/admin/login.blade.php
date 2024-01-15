@@ -24,7 +24,8 @@
 					<form action="{{ route('admin.authenticate')}}" method="post">
 						@csrf
 				  		<div class="input-group mb-3">
-							<input type="email" name="eamil" id="email" class="form-control" placeholder="Email">
+							<input type="email" value="{{ old('email')}}" name="eamil" id="email" class="form-control" @error('email') is-invalid 
+							@enderror placeholder="Email">
 							<div class="input-group-append">
 					  			<div class="input-group-text">
 									<span class="fas fa-envelope"></span>
@@ -37,7 +38,8 @@
 							@enderror
 				  		</div>
 				  		<div class="input-group mb-3">
-							<input type="password" name="password " id="password" class="form-control" placeholder="Password">
+							<input type="password" name="password " id="password" class="form-control" @error('password') is-invalid 
+							@enderror placeholder="Password">
 							<div class="input-group-append">
 					  			<div class="input-group-text">
 									<span class="fas fa-lock"></span>
