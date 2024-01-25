@@ -18,6 +18,7 @@
 			@include('admin.message')
 			
 			<div class="card card-outline card-primary">
+				
 			  	<div class="card-header text-center">
 					<a href="#" class="h3">Administrative Panel</a>
 			  	</div>
@@ -53,7 +54,7 @@
 							
 							@enderror
 				  		</div>
-				  		<div class="row">
+				  		{{-- <div class="row">
 							<div class="col-8">
 					  			<div class="icheck-primary">
 									<input type="checkbox" id="remember">
@@ -61,7 +62,7 @@
 						  				Remember Me
 									</label>
 					  			</div>
-							</div> 
+							</div>  --}}
 							<!-- /.col -->
 							<div class="col-4">
 					  			<button type="submit" class="btn btn-primary btn-block">Login</button>
